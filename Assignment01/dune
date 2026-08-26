@@ -1,0 +1,3 @@
+(executables
+ (names q1 q2 q3)
+ (flags (:standard -w -32-37)))
