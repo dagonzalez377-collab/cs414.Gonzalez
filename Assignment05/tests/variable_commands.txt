@@ -1,0 +1,16 @@
+# One command per line. Run as one shell session, so variables set here
+# stick around for later lines (the symbol table is shared across this file).
+
+set $a = $undefinedvar
+set $b = $undefinedvar
+set $sum = $a + $b
+set $product = $a * $b
+set $total = ($a + $b) * $sum
+echo $total
+
+# variables can be used anywhere a path/filename is expected
+ls $somedir
+cd /home/$user/docs
+cat $myfile
+print $reportfile
+exec $program
