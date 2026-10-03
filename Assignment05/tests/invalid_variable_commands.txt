@@ -1,0 +1,25 @@
+# One command per line. Each of these should fail to parse.
+
+# variable name is missing the '$'
+set x = $a
+
+# missing '='
+set $x $a
+
+# missing the expression
+set $x =
+
+# missing the '$'
+echo y
+
+# '$' must be followed by a letter, not a digit
+set $1abc = $a
+
+# digit literals aren't tokenized - only variables/parens are allowed
+set $x = 5
+
+# incomplete expression (trailing '+')
+set $x = $a +
+
+# missing closing ')'
+set $x = ($a + $b

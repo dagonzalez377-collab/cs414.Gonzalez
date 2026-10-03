@@ -1,0 +1,31 @@
+# One command per line. Each of these should be rejected -- either a
+# LexError (bad token) or a ParseError (bad syntax / "punt").
+
+# unknown command word
+delete resultsx.doc
+
+# cat/print/exec require a filename, not a path
+cat docs/reports
+
+# cat/print/exec take exactly one argument
+cat resultsx.doc extra
+
+# missing filename entirely
+cat
+
+# filename extension is too short (needs exactly 3 letters after the dot)
+cat short.tx
+
+# filename base is too long (needs exactly 8 letters before the dot)
+cat toolongname.doc
+
+# folder name exceeds the 8-character limit
+cd /toolongfoldername
+
+# digits are not allowed anywhere in this grammar
+cd home2
+
+# dangling separator with nothing after it in a relative path
+cd home/
+
+# empty input

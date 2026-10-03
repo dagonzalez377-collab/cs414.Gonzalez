@@ -1,0 +1,20 @@
+# One command per line. Blank lines and lines starting with '#' are ignored.
+# --- ls: no path, absolute path, relative path ---
+ls
+ls /
+ls docs
+ls docs/reports
+ls /docs/reports
+
+# --- cd: no path (root), absolute, relative, multi-level ---
+cd
+cd /
+cd home
+cd home/data
+cd /home/data/logs
+
+# --- cat / print / exec: each takes exactly one 8.3 filename ---
+cat resultsx.doc
+print budgetqq.xls
+exec programa.exe
+cat readmexx.txt
